@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAINBOW</title>
+    <h1><marquee>RAINBOW COLOR</marquee></h1>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 300px; 
+        }
+        button{
+            cursor: pointer;
+            background: rgb(34,193,195);
+            background: linear-gradient(0deg, rgba(34,193,195,0.6727941176470589) 0%, rgba(200,188,81,1) 71%, rgba(253,187,45,1) 100%);
+        }
+        /*button:hover{
+            transform: skew(20 deg);
+        }*/
+        button:hover{
+            height:5%
+            width:5%;
+            border-radius:10px;
+
+        }
+    </style>
+</head>
+<body>
+    <button>CLICK THIS!!</button>
+    <script>
+        const btn=document.querySelector('button');
+        const body=document.querySelector('body');
+        const color=['red','orange','yellow','green','blue','indigo','violet'];
+        body.style.backgroundColor='pink';
+        document.addEventListener('click',function(){
+            const colorIndex=parseInt(Math.random()*color.length);
+            body.style.backgroundColor=color[colorIndex];
+        });
+    </script>
+    
+</body>
+</html>
